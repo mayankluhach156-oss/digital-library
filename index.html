@@ -22,6 +22,15 @@
             color: #444;
         }
 
+        #searchBar {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
         .book-list {
             list-style: none;
             padding: 0;
@@ -65,9 +74,11 @@
     <h1>📚 Mayank's Digital Library</h1>
     <p style="text-align:center;">A curated collection of classic literature.</p>
 
+    <input type="text" id="searchBar" placeholder="Search for a book..." onkeyup="searchBooks()">
+
     <h2>Available Books</h2>
 
-    <ul class="book-list">
+    <ul class="book-list" id="bookList">
 
         <li class="book-item">
             <a href="books/Pride and Prejudice.pdf" target="_blank">
@@ -91,6 +102,26 @@
 
     <footer>
         More books coming soon...
+    </footer>
+
+<script>
+function searchBooks() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let books = document.getElementsByClassName("book-item");
+
+    for (let i = 0; i < books.length; i++) {
+        let text = books[i].innerText.toLowerCase();
+        if (text.includes(input)) {
+            books[i].style.display = "";
+        } else {
+            books[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
     </footer>
 
 </body>
