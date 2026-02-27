@@ -2,30 +2,96 @@
 <html>
 <head>
     <title>Mayank's Digital Library</title>
-</head>
-<body style="font-family: Arial; max-width: 800px; margin: auto;">
-    <h1>Welcome to Mayank's Digital Library 📚</h1>
-    <p>This is an online digital library project.</p>
 
-    <h2>Available Books:</h2>
-    <ul>
-       <li>
-  <a href="books/Pride and Prejudice.pdf" target="_blank">
-    Pride and Prejudice
-  </a>
-</li>
-  <li>
-    <a href="books/Great Expectations - Charles Dickens.pdf" target="_blank">
-      Great Expectations - Charles Dickens
-    </a>
-  </li>
-  <li>
-    <a href="books/Hamlet - William Shakespeare.pdf" target="_blank">
-      Hamlet - William Shakespeare
-    </a>
-  </li>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #444;
+        }
+
+        .book-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .book-item {
+            background: white;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .book-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+        }
+
+        .book-item a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .book-item a:hover {
+            color: #0077cc;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📚 Mayank's Digital Library</h1>
+    <p style="text-align:center;">A curated collection of classic literature.</p>
+
+    <h2>Available Books</h2>
+
+    <ul class="book-list">
+
+        <li class="book-item">
+            <a href="books/Pride and Prejudice.pdf" target="_blank">
+                Pride and Prejudice
+            </a>
+        </li>
+
+        <li class="book-item">
+            <a href="books/Great Expectations - Charles Dickens.pdf" target="_blank">
+                Great Expectations — Charles Dickens
+            </a>
+        </li>
+
+        <li class="book-item">
+            <a href="books/Hamlet - William Shakespeare.pdf" target="_blank">
+                Hamlet — William Shakespeare
+            </a>
+        </li>
+
     </ul>
 
-    <p>More books coming soon...</p>
+    <footer>
+        More books coming soon...
+    </footer>
+
 </body>
 </html>
