@@ -7,7 +7,8 @@
 
     <style>
 
-        /* ✅ LIGHT MODE (Default) */
+        /* ================= LIGHT MODE (DEFAULT) ================= */
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f6f9;
@@ -15,16 +16,17 @@
             margin: auto;
             padding: 20px;
             transition: background 0.3s, color 0.3s;
+            color: #222;
         }
 
         h1 {
             text-align: center;
-            color: #222;
+            color: inherit;
         }
 
         h2 {
             margin-top: 40px;
-            color: #444;
+            color: inherit;
         }
 
         #searchBar {
@@ -83,25 +85,27 @@
         footer {
             text-align: center;
             margin-top: 50px;
-            color: #777;
+            color: inherit;
         }
 
-        /* ✅ DARK MODE */
+        /* ================= DARK MODE ================= */
+
         .dark-mode {
             background-color: #1e1e1e;
-            color: white;
+            color: #ffffff;
         }
 
         .dark-mode .book-item {
             background-color: #2a2a2a;
-            color: white;
+            color: #ffffff;
         }
 
         .dark-mode .book-item a {
             color: #00aaff;
         }
 
-        /* ✅ Toggle Button Top Right */
+        /* ================= TOGGLE BUTTON ================= */
+
         #themeToggle {
             position: fixed;
             top: 20px;
@@ -114,7 +118,7 @@
 
 <body>
 
-    <!-- ✅ DARK/LIGHT TOGGLE BUTTON -->
+    <!-- ✅ Toggle Button -->
     <button id="themeToggle" onclick="toggleTheme()">🌙 / ☀️</button>
 
     <h1>Mayank's Digital Library📚 - Free Classic Literature PDFs🕮🏛️🌍</h1>
@@ -127,7 +131,7 @@
 
     <h2>Available Books</h2>
 
-    <ul class="book-list" id="bookList">
+    <ul class="book-list">
 
         <li class="book-item">
             <a href="books/Pride and Prejudice.pdf" target="_blank">
@@ -155,7 +159,6 @@
 
     </ul>
 
-    <!-- ✅ SHARE BUTTON -->
     <div style="text-align:center; margin-top:20px;">
         <button onclick="shareLibrary()">Share This Library</button>
     </div>
