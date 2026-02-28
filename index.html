@@ -2,15 +2,19 @@
 <html>
 <head>
     <title>Mayank's Digital Library📚 - Free Classic Literature PDFs🕮🏛️🌍</title>
+
     <meta name="description" content="Download free PDFs of timeless classics: Pride and Prejudice, Great Expectations, Hamlet, Sense and Sensibility. No sign-up, no ads. Public domain books for everyone.">
 
     <style>
+
+        /* ✅ LIGHT MODE (Default) */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f6f9;
             max-width: 900px;
             margin: auto;
             padding: 20px;
+            transition: background 0.3s, color 0.3s;
         }
 
         h1 {
@@ -81,13 +85,43 @@
             margin-top: 50px;
             color: #777;
         }
+
+        /* ✅ DARK MODE */
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .dark-mode .book-item {
+            background-color: #2a2a2a;
+            color: white;
+        }
+
+        .dark-mode .book-item a {
+            color: #00aaff;
+        }
+
+        /* ✅ Toggle Button Top Right */
+        #themeToggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
     </style>
 </head>
 
 <body>
 
+    <!-- ✅ DARK/LIGHT TOGGLE BUTTON -->
+    <button id="themeToggle" onclick="toggleTheme()">🌙 / ☀️</button>
+
     <h1>Mayank's Digital Library📚 - Free Classic Literature PDFs🕮🏛️🌍</h1>
-    <p style="text-align:center;">A curated collection of classic literature.</p>
+
+    <p style="text-align:center;">
+        A curated collection of classic literature.
+    </p>
 
     <input type="text" id="searchBar" placeholder="Search for a book..." onkeyup="searchBooks()">
 
@@ -149,6 +183,11 @@ function searchBooks() {
             books[i].style.display = "none";
         }
     }
+}
+
+/* ✅ DARK / LIGHT TOGGLE */
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
 }
 
 </script>
